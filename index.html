@@ -1,47 +1,56 @@
-<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>MV Coworker Guide</title><style>
-:root{--b:#215be3;--o:#f7a54b;--i:#172236;--p:#f3f6fc;--l:#e2e8f3;--m:#64748b;--g:#138566}
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>MV Coworker Guide</title><meta name="theme-color" content="#155ad3"><style>
+:root{/* Palette sampled from https://www.mv.church/: blue, cream, white and near-black. Muted text and borders are neutral UI supporting colors. */--b:#155ad3;--i:#141414;--p:#faf5ea;--l:#ded9ce;--m:#555555;--white:#ffffff}
 *{box-sizing:border-box}body{margin:0;background:var(--p);color:var(--i);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;font-size:15px;line-height:1.55}
-header{padding:54px max(24px,calc((100vw - 1140px)/2));background:radial-gradient(ellipse at 85% 0%,#406ff1 0%,transparent 48%),linear-gradient(125deg,#0d1e48,#194cba 78%);color:white;position:relative;overflow:hidden}
+header{padding:54px max(24px,calc((100vw - 1140px)/2));background:var(--b);color:var(--white);position:relative;overflow:hidden}
 header:after{content:"";position:absolute;right:-90px;top:-120px;width:430px;height:430px;border:1px solid #ffffff35;border-radius:50%;box-shadow:0 0 0 55px #ffffff0a,0 0 0 110px #ffffff08;pointer-events:none}
-header>div{font-size:12px!important;letter-spacing:.17em!important;color:#d7e6ff}
+header>div{font-size:12px!important;letter-spacing:.17em!important;color:var(--p)}
 header h1{font-size:clamp(35px,5.6vw,64px);letter-spacing:-.055em;line-height:1.05;text-transform:none;max-width:770px;margin:18px 0}
-header p{font-size:16px;line-height:1.7;max-width:650px;color:#e2eafe;margin:0}
-nav{display:flex;gap:8px;background:white;padding:13px max(18px,calc((100vw - 1140px)/2));border-bottom:1px solid var(--l);position:sticky;top:0;z-index:20;box-shadow:0 3px 15px #10265308}
-nav button{border:0;border-radius:10px;background:transparent;padding:12px 17px;font-size:12px;font-weight:750;text-transform:none;color:#475569;cursor:pointer}
-nav button.a{background:#eaf0ff;color:#215be3}
+header p{font-size:16px;line-height:1.7;max-width:650px;color:var(--p);margin:0}
+nav{display:flex;gap:8px;background:var(--white);padding:13px max(18px,calc((100vw - 1140px)/2));border-bottom:1px solid var(--l);position:sticky;top:0;z-index:20;box-shadow:0 3px 15px #14141408}
+nav button{border:0;border-radius:10px;background:transparent;padding:12px 17px;font-size:12px;font-weight:750;text-transform:none;color:var(--m);cursor:pointer}
+nav button.a{background:var(--p);color:var(--b)}
 main{max-width:1180px;margin:auto;padding:30px 22px 70px}
 .page{display:none}.page.a{display:block}
 .hero{background:transparent;border:0;padding:0 0 12px;margin:0 0 18px}
 .hero h2{font-size:27px;letter-spacing:-.04em;line-height:1.15;text-transform:none;margin:0 0 8px}
-.hero p{font-size:14px;color:#607087;max-width:760px}
-.box,.sec,.person,.insight{background:white;border:1px solid var(--l);border-radius:18px;padding:24px;margin-bottom:18px;box-shadow:0 8px 26px #10265308}
+.hero p{font-size:14px;color:var(--m);max-width:760px}
+.box,.sec,.person,.insight{background:var(--white);border:1px solid var(--l);border-radius:18px;padding:24px;margin-bottom:18px;box-shadow:0 8px 26px #14141408}
 .pick{display:grid;grid-template-columns:1fr 1fr 1.15fr;gap:15px;align-items:end}
-label{display:block;font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.08em;color:#56647b}
-select{width:100%;margin-top:8px;padding:15px 12px;background:#f8faff;border:1px solid #d9e3f2;border-radius:10px;color:#1d2b44;font-size:14px;min-height:50px}
-.go{grid-column:1/-1;background:#215be3;color:white;border:0;border-radius:11px;padding:17px 20px;font-size:14px;font-weight:800;text-transform:none;cursor:pointer;box-shadow:0 8px 18px #215be330}
-.go:hover{background:#1646b6}
-.head{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:20px;background:#14264c;color:white;padding:23px;border-radius:16px;margin:26px 0 18px}
-.name{font-size:20px;font-weight:850;letter-spacing:-.03em;text-transform:none}.role{font-size:12px;color:#b9c9e6;text-transform:none}.head>b{font-size:10px;color:#afc5ed;letter-spacing:.13em;text-align:center}
+label{display:block;font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.08em;color:var(--m)}
+select{width:100%;margin-top:8px;padding:15px 12px;background:var(--p);border:1px solid var(--l);border-radius:10px;color:var(--i);font-size:14px;min-height:50px}
+.go{grid-column:1/-1;background:var(--b);color:var(--white);border:0;border-radius:11px;padding:17px 20px;font-size:14px;font-weight:800;text-transform:none;cursor:pointer;box-shadow:0 8px 18px #155ad330}
+.go:hover{background:var(--i)}
+.head{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:20px;background:var(--i);color:var(--white);padding:23px;border-radius:16px;margin:26px 0 18px}
+.name{font-size:20px;font-weight:850;letter-spacing:-.03em;text-transform:none}.role{font-size:12px;color:var(--p);text-transform:none}.head>b{font-size:10px;color:var(--p);letter-spacing:.13em;text-align:center}
 .sum{display:grid;grid-template-columns:repeat(3,1fr);gap:15px;margin:18px 0}
-.card{background:white;border:1px solid var(--l);border-radius:15px;border-top:4px solid #215be3;padding:20px;box-shadow:0 8px 22px #10265308}
-.card:first-child{border-top-color:#138566}.card:nth-child(2){border-top-color:#f7a54b}
-.card b,.point b{display:block;font-size:12px;font-weight:850;text-transform:none;margin-bottom:10px;color:#26374f}
-.card span,.point span{font-size:14px;line-height:1.7;color:#4b5c73}
+.card{background:var(--white);border:1px solid var(--l);border-radius:15px;border-top:4px solid var(--b);padding:20px;box-shadow:0 8px 22px #14141408}
+.card:first-child{border-top-color:var(--b)}.card:nth-child(2){border-top-color:var(--i)}
+.card b,.point b{display:block;font-size:12px;font-weight:850;text-transform:none;margin-bottom:10px;color:var(--i)}
+.card span,.point span{font-size:14px;line-height:1.7;color:var(--m)}
 .sec h3,.insight h3{font-size:20px;letter-spacing:-.03em;text-transform:none;margin:0 0 15px}
-.insight{border:1px solid #c9d8fb;background:linear-gradient(135deg,#ffffff,#eef4ff);padding:27px}
-.insight p{font-size:15px;color:#4c5f7a;line-height:1.7}
-.tag{display:inline-block;font-size:11px;color:#215be3;text-transform:uppercase;letter-spacing:.12em;font-weight:850;margin-bottom:9px}
-.script{background:white;border-left:4px solid #215be3;border-radius:0 10px 10px 0;padding:19px;font-size:15px;line-height:1.7;margin-top:18px}
-.point{padding:16px 18px;background:#f7f9fd;border-left:4px solid #215be3;border-radius:0 10px 10px 0;margin:10px 0}
-.point.t{border-left-color:#eea148;background:#fff8f0}.point.ok{border-left-color:#138566;background:#f0faf6}
-.tiny{font-size:12px;color:#758298;line-height:1.6}
+.insight{border:1px solid var(--l);background:linear-gradient(135deg,var(--white),var(--p));padding:27px}
+.insight p{font-size:15px;color:var(--m);line-height:1.7}
+.tag{display:inline-block;font-size:11px;color:var(--b);text-transform:uppercase;letter-spacing:.12em;font-weight:850;margin-bottom:9px}
+.script{background:var(--white);border-left:4px solid var(--b);border-radius:0 10px 10px 0;padding:19px;font-size:15px;line-height:1.7;margin-top:18px}
+.point{padding:16px 18px;background:var(--p);border-left:4px solid var(--b);border-radius:0 10px 10px 0;margin:10px 0}
+.point.t{border-left-color:var(--i);background:var(--p)}.point.ok{border-left-color:var(--b);background:var(--p)}
+.tiny{font-size:12px;color:var(--m);line-height:1.6}
 .people{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-.person{margin:0;min-height:145px}.person h3{font-size:17px;letter-spacing:-.02em;text-transform:none;margin:0 0 3px}.person .s{font-size:12px;color:#697991}
+.person{margin:0;min-height:145px}.person h3{font-size:17px;letter-spacing:-.02em;text-transform:none;margin:0 0 3px}.person .s{font-size:12px;color:var(--m)}
 .chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:14px}
-.chip{font-size:11px;font-weight:700;padding:5px 9px;background:#eef3fc;color:#2b4c83;border-radius:6px;position:relative;cursor:help}
-.chip[data-tip]:hover:after,.chip[data-tip]:focus:after{content:attr(data-tip);position:absolute;bottom:calc(100% + 8px);left:0;width:220px;max-width:80vw;background:#172236;color:white;padding:12px;border-radius:9px;font-size:12px;line-height:1.5;z-index:50}
+.chip{font-size:11px;font-weight:700;padding:5px 9px;background:var(--p);color:var(--b);border-radius:6px;position:relative;cursor:help}
+.chip[data-tip]:hover:after,.chip[data-tip]:focus:after{content:attr(data-tip);position:absolute;bottom:calc(100% + 8px);left:0;width:220px;max-width:80vw;background:var(--i);color:var(--white);padding:12px;border-radius:9px;font-size:12px;line-height:1.5;z-index:50}
 @media(max-width:850px){.pick{grid-template-columns:1fr 1fr}.pick label:nth-child(3){grid-column:1/-1}.people{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:600px){header{padding:36px 22px}header h1{font-size:39px}header p{font-size:14px}nav{padding:10px;gap:2px}nav button{font-size:11px;padding:10px}main{padding:22px 14px 55px}.pick,.head,.sum,.people{grid-template-columns:1fr}.pick label:nth-child(3){grid-column:auto}.head>b{text-align:left}.box,.sec,.insight,.person{padding:18px}.hero h2{font-size:24px}}
+
+nav button:hover{background:var(--p);color:var(--b)}
+nav button.a{background:var(--b);color:var(--white)}
+button:focus-visible,select:focus-visible,.chip:focus-visible{outline:3px solid var(--b);outline-offset:4px}
+select:hover{border-color:var(--b)}
+.go:active{background:var(--i)}
+.chip:hover,.chip:focus-visible{background:var(--b);color:var(--white)}
+.pick>*{min-width:0}
+@media(max-width:600px){select{font-size:16px}nav button{min-height:44px}.chip[data-tip]:hover:after,.chip[data-tip]:focus:after{position:fixed;left:14px;right:14px;bottom:20px;width:auto;max-width:none}}
 </style></head><body><header><div style="font-size:9px;font-weight:900;letter-spacing:.13em">MV.CHURCH · COWORKER RESOURCE</div><h1>Better teams start with better understanding.</h1><p>Meet your team beyond their job titles. Explore the strengths, motivations, and working preferences behind your collaboration—and find a practical way forward.</p></header><nav id="nav"></nav><main>
 <section id="compare" class="page a"><div class="hero"><h2>Find a better way to work together.</h2><p>Choose two coworkers and the real situation you are navigating. Get a focused conversation starter, specific next steps, and insights grounded in the profiles you shared.</p></div><div class="box"><div class="pick"><label>I am<select id="a"></select></label><label>I am working with<select id="b"></select></label><label>What are you navigating?<select id="scenario"><option value="general">Everyday collaboration</option><option value="communication">Communication breakdown</option><option value="decisions">Different opinions / decisions</option><option value="feedback">Giving difficult feedback</option><option value="deadlines">Missed deadlines / follow-through</option><option value="delegation">Delegation and ownership</option><option value="project">Starting a project together</option></select></label><button class="go" id="go">Get insights</button></div></div><div id="r"></div></section>
 <section id="people" class="page"><div class="hero"><h2>People</h2><p>A quick reference for the whole staff.</p></div><div id="pg" class="people"></div></section>
